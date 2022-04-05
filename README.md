@@ -22,3 +22,35 @@ However, when we split up our data and gather summary statistics for each lot, w
 
 ![Lot_Summary](https://user-images.githubusercontent.com/94764735/161834417-df12d585-820d-4121-be7e-cb8762fdef66.png)
 
+
+## T-Tests on Suspension Coils
+
+Using our Suspension Coil data, we performed some t-tests to determine if all manufacturing lots (and each individual lot) are statistically different from the population mean of 1,500 pounds per square inch. The first t-test we performed was on the entire data set, yielding the following results:
+
+![t test_All](https://user-images.githubusercontent.com/94764735/161840013-f7a7ca2f-13d2-4993-953e-0ad4c8491afa.png)
+
+Here, we can see that the listed mean is 1498.78, which is slightly lower than the population mean that we were expecting. However, the p-value we got is 0.06 which is higher than the 0.05 significance level that we generally use. This means that we do not have sufficient evidence to reject our null hypothesis, and we accept that the PSI data across all manufacturing lots is not statistically different from the population mean of 1,500 pounds per square inch.
+
+Next, we filtered our `Suspension_Coil` data into three additional data sets, one for each Manufacturing Lot. We ran a t-test for the Lot 1 data and came to a similar conclusion as our first t-test:
+
+![t test_Lot1](https://user-images.githubusercontent.com/94764735/161841508-55ccdc9a-38dc-48d0-baf4-f80dfdb4b364.png)
+
+The resulting mean for Lot 1 actually did come out to exactly 1500, which tells us that the PSI data for Lot 1 is not statistically different from the population mean of 1,500 PSI. Just to be sure, we can look at the p-value, which is 1 for the Lot 1 data. 1 is certainly bigger than our 0.05 significance level, thus we can confirm that we must accept the null hypothesis and conclude (again) that there is no significant statistical difference between Lot 1 PSI mean and the PSI population mean.
+
+After running the Lot 2 t-test, we got similar results as those we got for Lot 1:
+
+![t test_Lot2](https://user-images.githubusercontent.com/94764735/161842285-2a22da46-99b0-4015-912c-28d3b2c94e7d.png)
+
+The mean is slightly higher at 1500.2, but the difference is not much. The p value did change a bit more than the mean did, as it dropped down to 0.61, however, this is still well above the 0.05 significance level. So, from these results we can draw the same conclusion as we did with Lot 1: there is no significant statistical difference between Lot 2 PSI mean and the PSI population mean.
+
+Moving on to Lot 3, we gathered some different results from our t-test than we did for the previous two lots. The resulting mean for Lot 3 was 1496.14, which is pretty close to our 1500 population mean, but much father off than the other two lots. Looking at the p value of 0.042, we see that for this lot we do have sufficient evidence to reject our null hypothesis. This p value IS lower than our 0.05 significance level, thus meaning that we do have enough evidenve to reject the null hypothesis. Therefore, we can say (for Lot 3) that it IS statistically different from our population mean of 1500 PSI.
+
+This is the second time now that Lot 3 has had different results from the other two lots. Clearly, there is something going on with Lot 3.
+
+
+
+
+
+
+
+
