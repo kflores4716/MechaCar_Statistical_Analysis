@@ -45,12 +45,24 @@ The mean is slightly higher at 1500.2, but the difference is not much. The p val
 
 Moving on to Lot 3, we gathered some different results from our t-test than we did for the previous two lots. The resulting mean for Lot 3 was 1496.14, which is pretty close to our 1500 population mean, but much father off than the other two lots. Looking at the p value of 0.042, we see that for this lot we do have sufficient evidence to reject our null hypothesis. This p value IS lower than our 0.05 significance level, thus meaning that we do have enough evidenve to reject the null hypothesis. Therefore, we can say (for Lot 3) that it IS statistically different from our population mean of 1500 PSI.
 
-This is the second time now that Lot 3 has had different results from the other two lots. Clearly, there is something going on with Lot 3.
+This is the second time now that Lot 3 has had different results from the other two lots. Clearly, there is something going on with Lot 3 that is causing these results.
 
+## Study Design: MechaCar vs Competition
 
+When it comes to selling a new vehicle, it is very important to do some research into how it might compare with other, similar vehicles that are already available. Our MechaCar is still just a prototype, but we are getting close to being ready to start selling to the public. So, before we do so, we would like to run some further analyses to determine if we are pricing our MechaCar reasonably compared to the competition. In order to do so, we will need to collect data for the compeition so that we can determine how their pricing compares to the quality of their vehicles. For this analysis, we will search for the following data:
 
+- Engine Type (gas, diesel, hybrid, electric)
+- Fuel Efficiency
+- Safety Rating
+- Reliability
+- Price (new selling price, not used selling price)
 
+Once we scour the internet and find data for each category listed above, we will use those categories as our metrics to be tested in our analysis. Before running the data through `RScript`, we chose the following Null and Alternative Hypotheses:
 
+- Null Hypothesis: These metrics have a significant impact on a car's selling price, and based on these metrics we are pricing our MechaCar correctly according to its performance as compared to the competition.
+- Alternative Hypothesis: These metrics do not have enough of an impact on a car's selling price, and therefore we cannot determine whether we are pricing our MechaCar appropriately or not.
+
+The analysis we will perform is a multiple linear regression, using Price as our dependent variable. We will use a multiple linear regression model because it will  tell us which of our metrics have a significant impact on selling price. Once we determine which metrics impact selling price the most, we can filter out the competitor's vehicles that share those same metrics with our MechaCar. Finally, we can sort through the listed selling prices of those similar vehicles and use those prices to decide on a final selling price of our own. 
 
 
 
